@@ -1,0 +1,112 @@
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/piloting_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".MiniDroneActivity">
+
+        <Button
+            android:id="@+id/buttonForward"
+            android:layout_width="75dp"
+            android:layout_height="75dp"
+            android:layout_alignParentTop="true"
+            android:layout_toEndOf="@+id/buttonRollLeft"
+            android:text="前進" />
+
+        <Button
+            android:id="@+id/buttonRollLeft"
+            android:layout_width="75dp"
+            android:layout_height="75dp"
+            android:layout_above="@+id/buttonBack"
+            android:layout_toLeftOf="@+id/buttonBack"
+            android:text="左移動" />
+
+        <Button
+            android:id="@+id/buttonBack"
+            android:layout_width="75dp"
+            android:layout_height="75dp"
+            android:layout_above="@+id/buttonLandOrTakeOff"
+            android:layout_toLeftOf="@+id/buttonRollRight"
+            android:text="後退" />
+
+        <Button
+            android:id="@+id/buttonRollRight"
+            android:layout_width="75dp"
+            android:layout_height="75dp"
+            android:layout_above="@+id/buttonBack"
+            android:layout_toLeftOf="@+id/buttonLandOrTakeOff"
+            android:width="20dp"
+            android:text="右移動" />
+
+        <Button
+            android:id="@+id/buttonLandOrTakeOff"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/scrollViewMessage"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="10dp"
+            android:width="100dp"
+            android:text="離陸" />
+
+        <ScrollView
+            android:id="@+id/scrollViewMessage"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_alignParentBottom="true">
+
+            <TextView
+                android:id="@+id/textMessage"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#ff0000" />
+        </ScrollView>
+
+        <TextView
+            android:id="@+id/labelMessage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@id/scrollViewMessage"
+            android:text="メッセージ: "
+            android:textColor="#ff0000" />
+
+        <Button
+            android:id="@+id/buttonYawRight"
+            android:layout_width="75dp"
+            android:layout_height="75dp"
+            android:layout_alignTop="@+id/buttonYawLeft"
+            android:layout_toRightOf="@+id/buttonGazDown"
+            android:text="右回転" />
+
+        <Button
+            android:id="@+id/buttonGazUp"
+            android:layout_width="75dp"
+            android:layout_height="75dp"
+            android:layout_toRightOf="@+id/buttonYawLeft"
+            android:width="110dp"
+            android:text="上昇" />
+
+        <Button
+            android:id="@+id/buttonGazDown"
+            android:layout_width="75dp"
+            android:layout_height="75dp"
+            android:layout_alignTop="@+id/buttonBack"
+            android:layout_toRightOf="@+id/buttonYawLeft"
+            android:width="110dp"
+            android:text="下降" />
+
+        <Button
+            android:id="@+id/buttonYawLeft"
+            android:layout_width="75dp"
+            android:layout_height="75dp"
+            android:layout_alignTop="@+id/buttonRollLeft"
+            android:layout_toRightOf="@+id/buttonLandOrTakeOff"
+            android:text="左回転" />
+    </RelativeLayout>
+
+
+</LinearLayout>
